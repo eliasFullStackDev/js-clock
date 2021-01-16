@@ -1,0 +1,74 @@
+<!-- 
+ -- js-clock
+ -- version: 1.0.0
+ -- By: Elias Abdurrahman
+ -- date: july 5, 2019
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="Elias Abdurrahman">
+  <meta name="description" content="javaScript clock">
+  <meta name="keywords" content="HTML, CSS, JavaScript, js-clock">
+  <title>JavaScript Clock</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="favicon.PNG" />
+</head>
+
+<body>
+  <div class="main-section">
+
+   <div class="clock-holder">
+        <div id="alarmPopup"></div>
+        <div class="clock-header">
+          <ul id="nav">
+            <li class="active" onclick="chane_display(1)">Clock</li>
+            <li onclick="chane_display(2)">Alarm</li>
+            <li onclick="chane_display(3)">Stopwatch</li>
+            <li onclick="chane_display(4)">Timer</li>
+          </ul>
+       </div>
+       <div class="clock-body">
+         <div class="clock" id="app_clock"></div>
+
+         <div class="alarm" id="app_alarm"></div>
+
+         <div class="stopwatch" id="app_stopwatch"></div>
+
+          <div class="timer " id="app_timer"></div>
+      </div>
+    </div>
+
+    <footer>
+      <h2>@eliasFullStackDev</h2>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/codingwithelias?sub_confirmation=1" 
+           target="_blank">YouTube</a> 
+        |
+        <a href="https://me.habeshasoft.com" 
+           target="_blank">Website</a>
+        |
+        <a href="https://github.com/eliasFullStackDev" 
+           target="_blank">GitHub</a>
+      </div>
+    </footer>
+  </div>
+  <script src="js/clock-vars.js"></script> 
+  <script src="js/app.js"></script> 
+  <script src="js/alarm.js"></script> 
+  <script src="js/stopwatch.js"></script> 
+  <script src="js/timer.js"></script> 
+  <script>
+    run_clock();
+    run_alarm();
+    runStopwatch();
+    runTimer();
+    setInterval(run_clock, 999);
+  </script>
+</body>
+
+</html>
